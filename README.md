@@ -16,7 +16,25 @@ the square brackets (for multiple-choice questions).
 Describe the purpose of a clearfix in CSS, and give an example of how to do it.
 
 Your Answer:
-```text
+```
+clearfix is used to allow the parent container to naturally fit to the elements within that are floated. Without clearfix, the parent container will collapse if/when elements within are floated.
+
+To implement clearfix, we do the following:
+
+Give the parent container a classname "clearfix" in the html file.
+In the style.css file,
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+After this you can float the elements within the container and it won't collapse.
 ```
 
 ### Question #2
@@ -25,7 +43,9 @@ What does the following selector do?  `ul.dropdown > li`?
 
 Select 1:
 ```
-[] Selects all li's which are directly inside a ul of class dropdown (children)
+Note: 'ul.dropdown > li' as a selector shows me error. But '.dropdown > li' works. It selects all li's that are directly inside ul's with class dropdown.
+
+[x] Selects all li's which are directly inside a ul of class dropdown (children)
 [] Selects all li's which are anywhere inside a ul of class dropdown (any descendant)
 [] Selects all ul's of class dropdown, as well as the children elements that are li's
 [] Selects all ul's of class dropdown, only if their children are exclusively li's
@@ -38,7 +58,8 @@ Select 1:
 Describe the rules of scope in JavaScript.
 
 Your Answer:
-```text
+To know the scope a variable in JS is to know where a variable can be referenced or used. A variable has a local scope when it is defined inside a function with the keyword 'var', and it is global in scope if it is define outside a function or anywhere without the keyword 'var'. Scope is important because it allows us to know where a particular variable can be used or referenced.```
+
 ```
 
 
@@ -51,7 +72,23 @@ the variable pizza inside your method.
 
 Your Answer:
 ```js
-// write code here
+
+var pizza = {
+temperature: 70,
+bake: function (){
+  this.temperature = 300;
+};
+}
+
+Or
+
+var pizza = {
+temperature: 70,
+bake: function () {
+  pizza.temperature = 300;
+};
+}
+
 ```
 
 ## Callbacks
@@ -64,7 +101,18 @@ argument. Finally, demonstrate calling `doSomething` with a function.**
 
 Your Answer:
 ```js
-// write code here
+The language is quite confusing; I've a hard time understanding the main concept. As for my understanding goes, argument(s) for a function goes inside (); and then included inside the function like we've been doing with examples like: function doSomething( num1, num2) {
+num1*num2;
+}
+
+But in this particular question, I'd assume it goes as follows:
+
+function doSomething (thingToDo) {
+thingToDo;
+}
+
+But this will return argument unchanged.
+Can you please help walk me through this?
 ```
 
 ### Question #6
@@ -75,7 +123,7 @@ Select all that apply:
 ```
 [] Synchronous code runs at an even pace, asynchronous code runs with uneven pacing.
 [] Synchronous code runs all at the same time, asynchronous code runs completely randomly
-[] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
+[x] Synchronous code runs in order (as appears in the source), asynchronous code may run at a later time.
 ```
 
 ## Git
@@ -87,7 +135,7 @@ Which of the following represents a correct workflow for submitting a PR on a no
 
 Select 1:
 ```
-[] fork on github; git clone <fork_url>; git checkout -b <charlie_solution>; git add <files>; git commit; git push; create pull request
+[x] fork on github; git clone <fork_url>; git checkout -b <charlie_solution>; git add <files>; git commit; git push; create pull request
 [] fork on github; git clone <ga_dc_url>; git checkout -b <charlie_solution>; git add <files>; git commit; git push; create pull request
 [] git clone <ga_dc_url>; git branch <charlie_solution>; git add <files>; git commit; git push; create pull request
 [] fork on github; git clone <fork_url>; git checkout -b <charlie_solution>; git add <files>; git commit; git pull; create pull request
@@ -101,7 +149,7 @@ Which of the following statements will work, assuming jQuery is loaded?
 
 Select all that apply:
 ```
-[] `$(".post").css("background", "peachpuff")`
+[x] `$(".post").css("background", "peachpuff")`
 [] `$(".post").innerHTML`
 [] `$(".post").html()`
 [] `document.getElementsByClassName("post")[0].innerHTML`
@@ -116,7 +164,12 @@ body, that says "hello".
 
 Your Answer:
 ```js
-// your code here
+// After creating a button in HTML with class name greeting, in script.jss file, the code is as follows:
+
+$('.greeting').on("click", function () {
+  $('body').append ("<p> hello </p>");
+})
+
 ```
 
 ## Software Development Processes
@@ -131,5 +184,6 @@ role, goal, and reason for each.
 Finally, link to your repo on github in the space below.
 
 Your Answer:
-```text
+```
+git@github.com:matiamin/mati_Project1.git
 ```
