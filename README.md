@@ -105,7 +105,7 @@ The language is quite confusing; I've a hard time understanding the main concept
 num1*num2;
 }
 
-But in this particular question, I'd assume it goes as follows:
+//But in this particular question, I'd assume it goes as follows
 
 function doSomething (thingToDo) {
 thingToDo;
