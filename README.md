@@ -185,5 +185,5 @@ Finally, link to your repo on github in the space below.
 
 Your Answer:
 ```
-git@github.com:matiamin/mati_Project1.git
+https://github.com/matiamin/mati_Project1
 ```
